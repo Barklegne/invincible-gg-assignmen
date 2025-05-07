@@ -1,10 +1,8 @@
+/* eslint-disable no-unused-vars */
+
 import React from 'react'
 import { motion } from 'framer-motion'
-// import nftImage from '../assets/hero-black-ape-white.svg'
 import nftImage from '../assets/nftTwo.webp'
-// import nftImage from '../assets/nftTwo1.svg'
-
-// const nftImage = , replace with your own
 
 const HeroSection = () => (
 	<motion.section

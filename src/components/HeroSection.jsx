@@ -15,7 +15,7 @@ const HeroSection = () => (
 			<motion.h1
 				initial={{ opacity: 0, x: -60 }}
 				whileInView={{ opacity: 1, x: 0 }}
-				viewport={{ once: false, amount: 0.6 }}
+				viewport={{ once: true, amount: 0.6 }}
 				transition={{ duration: 0.7, delay: 0.1 }}
 				className='pt-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold text-white mt-10 md:mt-14 xl:mt-28 mb-6 md:mb-8 leading-tight animate-text-gradient bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent drop-shadow-lg'
 			>

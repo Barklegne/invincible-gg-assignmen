@@ -4,13 +4,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => (
 	<footer className='w-full bg-black/80 border-t border-gray-800 text-gray-300 py-8 px-4 '>
-		<motion.div
-			initial={{ opacity: 0, y: 40 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true, amount: 0.3 }}
-			transition={{ duration: 0.8, ease: 'easeOut' }}
-			className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6'
-		>
+		<div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6'>
 			<div className='text-lg font-bold text-gold'>Horse Bazaar</div>
 			<div className='flex gap-8 text-sm'>
 				<a href='#' className='hover:text-gold transition'>
@@ -34,7 +28,7 @@ const Footer = () => (
 					<i className='fab fa-discord'></i>
 				</a>
 			</div>
-		</motion.div>
+		</div>
 		<div className='text-center text-xs text-gray-500 mt-6'>
 			&copy; {new Date().getFullYear()} Horse Bazaar. All rights reserved.
 		</div>

@@ -10,7 +10,7 @@ const FAQ = () => {
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true, amount: 0.3 }}
+				viewport={{ once: false, amount: 0.3 }}
 				transition={{ duration: 0.8, ease: 'easeOut' }}
 				className='max-w-3xl mx-auto px-4'
 			>
@@ -26,7 +26,7 @@ const FAQ = () => {
 							className='border-b border-gray-700 pb-4'
 						>
 							<button
-								className='w-full text-left text-lg font-semibold text-gold flex justify-between items-center focus:outline-none'
+								className='w-full text-left text-lg font-normal text-gold flex justify-between items-center focus:outline-none'
 								onClick={() => setOpen(open === i ? null : i)}
 							>
 								{faq.q}

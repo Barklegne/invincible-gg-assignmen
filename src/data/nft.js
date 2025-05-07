@@ -1,7 +1,7 @@
 export const nftProducts = [
 	{
 		id: 1,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Golden Arabian Stallion',
 		price: 2.5, // in ETH
 		saleType: 'Buy Now',
@@ -17,7 +17,7 @@ export const nftProducts = [
 	},
 	{
 		id: 2,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Midnight Thoroughbred',
 		currentBid: 1.8, // in ETH
 		saleType: 'Auction',
@@ -34,7 +34,7 @@ export const nftProducts = [
 	},
 	{
 		id: 3,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Desert Wind Mustang',
 		price: 3.2,
 		saleType: 'Buy Now',
@@ -50,7 +50,7 @@ export const nftProducts = [
 	},
 	{
 		id: 4,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Royal Andalusian',
 		currentBid: 2.1,
 		saleType: 'Auction',
@@ -67,7 +67,7 @@ export const nftProducts = [
 	},
 	{
 		id: 5,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Mystic Unicorn',
 		price: 5.0,
 		saleType: 'Buy Now',
@@ -83,7 +83,7 @@ export const nftProducts = [
 	},
 	{
 		id: 6,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Warrior Steed',
 		currentBid: 1.5,
 		saleType: 'Auction',
@@ -100,7 +100,7 @@ export const nftProducts = [
 	},
 	{
 		id: 7,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Arctic Ice Pony',
 		price: 4.2,
 		saleType: 'Buy Now',
@@ -116,7 +116,7 @@ export const nftProducts = [
 	},
 	{
 		id: 8,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Celestial Pegasus',
 		currentBid: 6.8,
 		saleType: 'Auction',
@@ -133,7 +133,7 @@ export const nftProducts = [
 	},
 	{
 		id: 9,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Jungle Spirit Horse',
 		price: 3.5,
 		saleType: 'Buy Now',
@@ -149,7 +149,7 @@ export const nftProducts = [
 	},
 	{
 		id: 10,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Steampunk Stallion',
 		currentBid: 4.5,
 		saleType: 'Auction',
@@ -166,7 +166,7 @@ export const nftProducts = [
 	},
 	{
 		id: 11,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Dragon Horse Hybrid',
 		price: 7.2,
 		saleType: 'Buy Now',
@@ -182,7 +182,7 @@ export const nftProducts = [
 	},
 	{
 		id: 12,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Quantum Foal',
 		currentBid: 5.5,
 		saleType: 'Auction',
@@ -199,7 +199,7 @@ export const nftProducts = [
 	},
 	{
 		id: 13,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Crystal Shire Horse',
 		price: 4.8,
 		saleType: 'Buy Now',
@@ -215,7 +215,7 @@ export const nftProducts = [
 	},
 	{
 		id: 14,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Neon Night Mare',
 		currentBid: 3.9,
 		saleType: 'Auction',
@@ -232,7 +232,7 @@ export const nftProducts = [
 	},
 	{
 		id: 15,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Forest Guardian Horse',
 		price: 4.2,
 		saleType: 'Buy Now',
@@ -248,7 +248,7 @@ export const nftProducts = [
 	},
 	{
 		id: 16,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: "Time Traveler's Steed",
 		currentBid: 6.2,
 		saleType: 'Auction',
@@ -265,7 +265,7 @@ export const nftProducts = [
 	},
 	{
 		id: 17,
-		thumbnail: '/src/assets/nftTwo1.svg',
+		thumbnail: '/nftTwo1.svg',
 		title: 'Ocean Spirit Horse',
 		price: 5.5,
 		saleType: 'Buy Now',
@@ -281,7 +281,7 @@ export const nftProducts = [
 	},
 	{
 		id: 18,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Galactic Stallion',
 		currentBid: 7.5,
 		saleType: 'Auction',
@@ -298,7 +298,7 @@ export const nftProducts = [
 	},
 	{
 		id: 19,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Mystic Appaloosa',
 		price: 4.0,
 		saleType: 'Buy Now',
@@ -314,7 +314,7 @@ export const nftProducts = [
 	},
 	{
 		id: 20,
-		thumbnail: '/src/assets/nftTwo.webp',
+		thumbnail: '/nftTwo.webp',
 		title: 'Ancient War Horse',
 		currentBid: 5.8,
 		saleType: 'Auction',

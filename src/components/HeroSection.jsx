@@ -8,13 +8,7 @@ import nftImage from '../assets/nftTwo.webp'
 
 // Fully responsive Hero Section with Framer Motion animations
 const HeroSection = () => (
-	<motion.section
-		initial={{ opacity: 0, y: 40 }}
-		whileInView={{ opacity: 1, y: 0 }}
-		viewport={{ once: false, amount: 0.3 }}
-		transition={{ duration: 0.8, ease: 'easeOut' }}
-		className='relative flex flex-col md:flex-row justify-between px-4 sm:px-8 lg:px-16 min-h-[80vh] md:min-h-screen w-full overflow-hidden bg-gradient-to-r from-black via-gray-900 to-black'
-	>
+	<section className='relative flex flex-col md:flex-row justify-between px-4 sm:px-8 lg:px-16 min-h-[80vh] md:min-h-screen w-full overflow-hidden bg-gradient-to-r from-black via-gray-900 to-black'>
 		{/* Left: Text Content */}
 		<div className='z-10 w-full md:w-1/2 flex flex-col  lg:items-start xl:mt-0 items-center md:items-start text-center md:text-left'>
 			<motion.h1
@@ -69,7 +63,7 @@ const HeroSection = () => (
 				/>
 			</motion.div>
 		</div>
-	</motion.section>
+	</section>
 )
 
 export default HeroSection

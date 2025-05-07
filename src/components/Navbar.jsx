@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { IoIosSearch } from 'react-icons/io'
+import { GiHorseHead } from 'react-icons/gi'
 
 // Responsive Navbar with gold theme, glassy effect, and overlay hamburger menu
 const Navbar = () => {
@@ -19,9 +21,9 @@ const Navbar = () => {
 	return (
 		<>
 			{/* Main Navbar */}
-			<nav className='sticky top-0 z-50 w-full bg-black/40 backdrop-blur-md border-b border-gray-700 shadow-lg rounded-t-2xl px-4 sm:px-8 lg:px-16 py-4 sm:py-6 flex items-center justify-between'>
+			<nav className='sticky top-0 z-50 w-full bg-black/40 backdrop-blur-md border-b border-gray-800 shadow-lg rounded-t-2xl px-4 sm:px-8 lg:px-16 py-4  flex items-center justify-between'>
 				<div className='text-white text-2xl font-bold tracking-wide'>
-					Horse Bazaar
+					<GiHorseHead className='text-3xl' />
 				</div>
 				{/* Hamburger icon (mobile only) */}
 				<button
@@ -44,14 +46,20 @@ const Navbar = () => {
 					<a href='#' className='hover:text-gold transition text-center text-sm'>
 						Docs
 					</a>
-					<div className='flex flex-row gap-4 items-center w-auto'>
-						<button className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'>
-							Wallet
-						</button>
-						<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-sm text-white px-6 py-2 rounded-lg border border-white border-opacity-20 transition'>
-							Join
-						</button>
-					</div>
+				</div>
+				<div className='hidden sm:flex flex-row gap-4 items-center w-auto'>
+					<button
+						className='flex items-center justify-center w-10 h-10'
+						aria-label='Search'
+					>
+						<IoIosSearch className='text-white text-2xl' />
+					</button>
+					<button className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'>
+						Wallet
+					</button>
+					<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-sm text-white px-6 py-2 rounded-lg border border-white border-opacity-20 transition'>
+						Join
+					</button>
 				</div>
 			</nav>
 			{/* Fullscreen Overlay Mobile Menu */}
@@ -59,6 +67,7 @@ const Navbar = () => {
 				<div
 					className='fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/95'
 					onClick={() => setMenuOpen(false)}
+					// on click will close the menu
 				>
 					<button
 						className='absolute top-6 right-6 text-3xl text-white hover:text-gold focus:outline-none'

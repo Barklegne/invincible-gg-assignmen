@@ -25,7 +25,7 @@ const HeroSection = () => (
 				className='pt-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold text-white mt-10 md:mt-14 xl:mt-28 mb-6 md:mb-8 leading-tight animate-text-gradient bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent drop-shadow-lg'
 			>
 				<span className='block'>Most Expensive</span>
-				<span className='block animate-shimmer'>Horse Bazzar</span>
+				<span className='block animate-shimmer'>Horse Bazaar</span>
 			</motion.h1>
 			<motion.p
 				initial={{ opacity: 0, x: -40 }}

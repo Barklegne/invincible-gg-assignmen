@@ -101,9 +101,11 @@ const Gallery = () => {
 								className={`${
 									viewMode === 'grid'
 										? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-8'
-										: 'grid grid-cols-1 sm:grid-cols-2 gap-4'
+										: 'grid grid-cols-1 lg:grid-cols-2 gap-10'
 								} py-2`}
 							>
+								{/* If loading, show a number of NFTCardSkeletons (at least 2, or as many as there are items in this category)
+									Otherwise, map over the items and render NFTCard for each NFT */}
 								{loading
 									? Array.from({ length: Math.max(items.length, 2) }).map((_, idx) => (
 											<NFTCardSkeleton key={idx} viewMode={viewMode} />

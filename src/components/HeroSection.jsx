@@ -13,10 +13,10 @@ const HeroSection = () => (
 		{/* Left: Text Content */}
 		<div className='z-10 w-full md:w-1/2 flex flex-col  lg:items-start xl:mt-0 items-center md:items-start text-center md:text-left'>
 			<motion.h1
-				initial={{ opacity: 0, x: -60 }}
-				whileInView={{ opacity: 1, x: 0 }}
-				viewport={{ once: true, amount: 0.6 }}
-				transition={{ duration: 0.7, delay: 0.1 }}
+				initial={{ opacity: 0, x: -60 }} // initial state of the element
+				whileInView={{ opacity: 1, x: 0 }} // final state of the element
+				viewport={{ once: true, amount: 0.6 }} // viewport of the element
+				transition={{ duration: 0.7, delay: 0.1 }} // transition of the element
 				className='pt-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold text-white mt-10 md:mt-14 xl:mt-28 mb-6 md:mb-8 leading-tight animate-text-gradient bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent drop-shadow-lg'
 			>
 				<span className='block'>Most Expensive</span>

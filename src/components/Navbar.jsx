@@ -55,12 +55,13 @@ const Navbar = () => {
 					</a>
 				</div>
 				<div className='hidden sm:flex flex-row gap-4 items-center w-auto'>
-					<button
+					<Link
+						to='/gallery'
 						className='flex items-center justify-center w-10 h-10'
 						aria-label='Search'
 					>
 						<IoIosSearch className='text-white text-2xl' />
-					</button>
+					</Link>
 					<button className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'>
 						Wallet
 					</button>

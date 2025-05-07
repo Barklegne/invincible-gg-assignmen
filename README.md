@@ -11,13 +11,14 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **All navigation and hero section links/buttons** are normal size and weight for a clean, modern look
 - **Only the hero h1** is bold and large for maximum impact
 - **Hero section** is highly responsive, with adaptive text and image sizes
+- **Icon usage** in the Navbar for branding and search
 - **Pricing, FAQ, and Footer** components for a complete landing experience
 - **Framer Motion** for scroll-based reveal animations (repeats on every scroll into view)
 - **Dark, elegant background** matching the navbar and hero
 - **Easy customization** for colors, images, and layout
 - **Scalable pages structure** for future multi-page support
 - **Well-commented code** for clarity, especially around animation and complex logic
-- **All recent design and UX improvements** are now the new baseline for future work
+- **All recent design, layout, and UX improvements** (including icon usage, mobile menu overlay, hero section responsiveness, and all other accepted edits) are now the baseline for the project. All future work will build on this state.
 
 ## Project Structure
 
@@ -26,7 +27,7 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 ├── src/
 │   ├── assets/           # Images and SVGs for hero section
 │   ├── components/
-│   │   ├── Navbar.jsx    # Sticky, glassy navbar with fullscreen mobile overlay
+│   │   ├── Navbar.jsx    # Sticky, glassy navbar with icons and fullscreen mobile overlay
 │   │   ├── HeroSection.jsx # Hero section with gold theme and animation
 │   │   ├── Pricing.jsx   # Pricing tiers with animation
 │   │   ├── FAQ.jsx       # FAQ section with animation

@@ -39,10 +39,10 @@ const HeroSection = () => (
 				transition={{ duration: 0.7, delay: 0.3 }}
 				className='flex flex-col sm:flex-row gap-4 sm:gap-8 w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 justify-center md:justify-start'
 			>
-				<button className='bg-gold hover:bg-gold-dark text-black px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow transition text-base sm:text-lg'>
+				<button className='bg-gold hover:bg-gold-dark text-black px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow transition text-sm'>
 					Explore
 				</button>
-				<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg border border-white border-opacity-20 transition text-base sm:text-lg'>
+				<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg border border-white border-opacity-20 transition text-sm'>
 					How it works?
 				</button>
 			</motion.div>

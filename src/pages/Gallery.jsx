@@ -4,15 +4,21 @@ import NFTCardSkeleton from '../components/NFTCardSkeleton'
 import { nftProducts } from '../data/nft'
 import { BsGrid, BsList } from 'react-icons/bs'
 
+// The order in which NFT categories are displayed
 const CATEGORY_ORDER = ['Top Selling', 'For You', 'Best Deals']
 
+// Gallery page: displays all NFTs grouped by category, with search and view toggle
 const Gallery = () => {
-	const [viewMode, setViewMode] = useState('grid') // 'grid' or 'list'
+	// View mode: 'grid' or 'list'
+	const [viewMode, setViewMode] = useState('grid')
+	// Search input value
 	const [search, setSearch] = useState('')
+	// Debounced search value (updates after delay)
 	const [debouncedSearch, setDebouncedSearch] = useState('')
+	// Loading state to mimic network call
 	const [loading, setLoading] = useState(true)
 
-	// Debounce search input
+	// Debounce search input: update debouncedSearch 1s after user stops typing
 	useEffect(() => {
 		const handler = setTimeout(() => {
 			setDebouncedSearch(search)
@@ -20,7 +26,7 @@ const Gallery = () => {
 		return () => clearTimeout(handler)
 	}, [search])
 
-	// Simulate network call for NFTs
+	// Simulate network call for NFTs: show skeletons for 1.5s on search/view change
 	useEffect(() => {
 		setLoading(true)
 		const timer = setTimeout(() => {
@@ -29,7 +35,7 @@ const Gallery = () => {
 		return () => clearTimeout(timer)
 	}, [debouncedSearch, viewMode]) // dependencies for the useEffect are when the debouncedSearch or viewMode changes
 
-	// Group NFTs by category
+	// Group NFTs by category, filter by debounced search
 	const nftsByCategory = CATEGORY_ORDER.map((cat) => ({
 		category: cat,
 		items: nftProducts.filter(
@@ -46,7 +52,7 @@ const Gallery = () => {
 				Horse Bazaar Gallery
 			</h1>
 
-			{/* Controls: Search + View Toggle */}
+			{/* Controls: Search input and View toggle */}
 			<div className='mb-6 flex flex-row items-center justify-end gap-4'>
 				<input
 					type='text'
@@ -81,14 +87,16 @@ const Gallery = () => {
 				</div>
 			</div>
 
-			{/* Category Sections */}
+			{/* Category Sections: each section for a category of NFTs */}
 			{nftsByCategory.map(
 				({ category, items }) =>
 					items.length > 0 && (
 						<section key={category} className='mb-12'>
+							{/* Category Heading */}
 							<h2 className='text-xl font-bold text-gray-400 mb-6 mt-10  tracking-wide'>
 								{category}
 							</h2>
+							{/* NFT Cards or Skeletons */}
 							<div
 								className={`${
 									viewMode === 'grid'

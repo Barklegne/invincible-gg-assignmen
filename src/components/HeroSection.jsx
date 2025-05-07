@@ -44,7 +44,7 @@ const HeroSection = () => (
 					to='/gallery'
 					className='bg-gold hover:bg-gold-dark text-black px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow transition text-sm'
 				>
-					Explore
+					Gallery
 				</Link>
 				<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg border border-white border-opacity-20 transition text-sm'>
 					How it works?

@@ -17,13 +17,13 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **Dark, elegant background** matching the navbar and hero
 - **Easy customization** for colors, images, and layout
 - **Scalable pages structure** for future multi-page support
-- **Well-commented code** for clarity, especially around animation and complex logic
+- **Well-commented code** for clarity, especially around animation, logic, and data handling (see comments in all `.jsx` files)
 - **NFT Gallery** with the following features:
   - **Categorized sections**: NFTs are grouped and displayed by category (e.g., Top Selling, For You, Best Deals)
   - **Grid/List toggle**: Switch between grid and horizontal list views for browsing NFTs
   - **Category badges**: Each NFT card displays a colored badge for its category, next to the sale type label
   - **Debounced search**: Search input filters NFTs by title, with a 1-second debounce for performance
-  - **Thumbnail variety**: NFT cards use a mix of images for visual diversity (see `src/assets/`)
+  - **Thumbnail variety**: NFT cards use a mix of images for visual diversity (see `public/` for static assets)
   - **Responsive layout**: Both grid and list views are fully responsive
   - **Sectioned display**: Each category is shown as a separate section with a heading
   - **Modern card design**: Cards feature price, sale type, category, and a clean, compact layout
@@ -33,15 +33,17 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 
 ```
 /horsebazaar
+├── public/               # Static assets (SVGs, images) referenced as /filename.svg
 ├── src/
-│   ├── assets/           # Images and SVGs for hero section and NFT thumbnails
+│   ├── assets/           # Images and SVGs for hero section and NFT thumbnails (for imports only)
 │   ├── components/
 │   │   ├── Navbar.jsx    # Sticky, glassy navbar with icons and fullscreen mobile overlay
 │   │   ├── HeroSection.jsx # Hero section with gold theme and animation
 │   │   ├── Pricing.jsx   # Pricing tiers with animation
 │   │   ├── FAQ.jsx       # FAQ section with animation
 │   │   ├── Footer.jsx    # Footer with animation
-│   │   └── NFTCard.jsx   # NFT card with category badge, sale type, and responsive design
+│   │   ├── NFTCard.jsx   # NFT card with category badge, sale type, and responsive design
+│   │   └── NFTCardSkeleton.jsx # Skeleton loader for NFT cards
 │   ├── pages/
 │   │   └── Gallery.jsx   # NFT gallery with category sections, search, and view toggle
 │   ├── data/
@@ -69,10 +71,11 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 ## NFT Gallery Features
 
 - **Categories:** NFTs are grouped by category. To add or change categories, edit the `category` field in each NFT object in `src/data/nft.js` and update the `CATEGORY_ORDER` array in `Gallery.jsx`.
-- **Thumbnails:** To add new images, place them in `src/assets/` and update the `thumbnail` field in the NFT data.
+- **Thumbnails:** Place static images (SVGs, PNGs, etc.) in the `public/` folder and reference them as `/filename.svg` in your data. Do not use `/src/assets/filename.svg` for static asset paths in production.
 - **Search:** The search input filters NFTs by title with a 1-second debounce. You can adjust the delay in `Gallery.jsx`.
 - **Grid/List Toggle:** Use the buttons in the gallery to switch between grid and list views. List view shows two cards per row on larger screens.
 - **Category Badges:** Each card displays a colored badge for its category, styled and positioned next to the sale type label.
+- **Skeleton Loading:** While fetching or filtering, skeleton loaders are shown to mimic network delay.
 
 ## Animation (Framer Motion)
 - All main sections and key elements use Framer Motion for reveal-on-scroll animations.
@@ -81,7 +84,7 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - The code is well-commented to help you understand and tweak the animation logic.
 
 ## Customization
-- **Change hero or NFT images:** Replace files in `src/assets/` and update the relevant imports or data fields.
+- **Change hero or NFT images:** Place static images in `public/` and reference them as `/filename.svg` in your data, or import them if used directly in components.
 - **Edit gold theme:** Update the `gold` colors in `tailwind.config.js`.
 - **Navbar/hero links:** Edit text and links in `Navbar.jsx` and `HeroSection.jsx`.
 - **Add more pages:** Create new files in `src/pages/` and use React Router or your preferred routing solution.

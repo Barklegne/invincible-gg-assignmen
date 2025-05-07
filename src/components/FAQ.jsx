@@ -1,37 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-
-const faqs = [
-	{
-		q: 'What is Horse Bazaar?',
-		a: 'Horse Bazaar is a modern NFT marketplace for digital art, collectibles, and more, featuring a premium user experience and gold-themed design.',
-	},
-	{
-		q: 'How do I list my NFT?',
-		a: 'Simply connect your wallet, click "Explore" or "Get Started," and follow the prompts to list your NFT securely and easily.',
-	},
-	{
-		q: 'What payment methods are supported?',
-		a: 'We support ETH and other major cryptocurrencies for NFT purchases and sales.',
-	},
-	{
-		q: 'Is there a fee for listing?',
-		a: 'Starter listings have a minimal fee. Pro and Elite tiers offer premium features for a higher fee.',
-	},
-]
+import faqs from '../data/faq'
 
 const FAQ = () => {
 	const [open, setOpen] = useState(null)
 	return (
-		<motion.section
-			initial={{ opacity: 0, y: 40 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true, amount: 0.3 }}
-			transition={{ duration: 0.8, ease: 'easeOut' }}
-			className='w-full py-20 bg-gradient-to-r from-black via-gray-900 to-black'
-		>
-			<div className='max-w-3xl mx-auto px-4'>
+		<section className='w-full py-20 bg-gradient-to-r from-black via-gray-900 to-black'>
+			<motion.div
+				initial={{ opacity: 0, y: 40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.3 }}
+				transition={{ duration: 0.8, ease: 'easeOut' }}
+				className='max-w-3xl mx-auto px-4'
+			>
 				<h2 className='text-4xl font-extrabold text-center mb-12 text-gold'>FAQ</h2>
 				<div className='space-y-6'>
 					{faqs.map((faq, i) => (
@@ -63,8 +45,8 @@ const FAQ = () => {
 						</motion.div>
 					))}
 				</div>
-			</div>
-		</motion.section>
+			</motion.div>
+		</section>
 	)
 }
 

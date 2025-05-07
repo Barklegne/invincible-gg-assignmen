@@ -56,7 +56,7 @@ const Navbar = () => {
 			</nav>
 			{/* Fullscreen Overlay Mobile Menu */}
 			{menuOpen && (
-				<div className='fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/90'>
+				<div className='fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/95'>
 					<button
 						className='absolute top-6 right-6 text-3xl text-white hover:text-gold focus:outline-none'
 						onClick={() => setMenuOpen(false)}

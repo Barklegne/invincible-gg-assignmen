@@ -6,11 +6,11 @@ import Pricing from '../components/Pricing'
 import Navbar from '../components/Navbar'
 const Home = () => (
 	<>
-		<Navbar />
+		{/* <Navbar /> */}
 		<HeroSection />
 		<Pricing />
 		<FAQ />
-		<Footer />
+		{/* <Footer /> */}
 	</>
 )
 

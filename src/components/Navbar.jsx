@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { IoIosSearch } from 'react-icons/io'
 import { GiHorseHead } from 'react-icons/gi'
+import { Link } from 'react-router-dom'
 
 // Responsive Navbar with gold theme, glassy effect, and overlay hamburger menu
 const Navbar = () => {
@@ -22,9 +23,9 @@ const Navbar = () => {
 		<>
 			{/* Main Navbar */}
 			<nav className='sticky top-0 z-50 w-full bg-black/40 backdrop-blur-md border-b border-gray-800 shadow-lg rounded-t-2xl px-4 sm:px-8 lg:px-16 py-4  flex items-center justify-between'>
-				<div className='text-white text-2xl font-bold tracking-wide'>
+				<Link to='/' className='text-white text-2xl font-bold tracking-wide'>
 					<GiHorseHead className='text-3xl' />
-				</div>
+				</Link>
 				{/* Hamburger icon (mobile only) */}
 				<button
 					className='sm:hidden flex flex-col justify-center items-center w-10 h-10'
@@ -37,12 +38,18 @@ const Navbar = () => {
 				</button>
 				{/* Desktop menu */}
 				<div className='hidden sm:flex flex-row gap-12 text-white font-medium items-center w-auto'>
-					<a href='#' className='hover:text-gold transition text-center text-sm'>
+					<Link
+						to='/'
+						className='hover:text-gold transition text-center text-sm !cursor-pointer'
+					>
 						Home
-					</a>
-					<a href='#' className='hover:text-gold transition text-center text-sm'>
+					</Link>
+					<Link
+						to='/gallery'
+						className='hover:text-gold transition text-center text-sm cursor-pointer'
+					>
 						Gallery
-					</a>
+					</Link>
 					<a href='#' className='hover:text-gold transition text-center text-sm'>
 						Docs
 					</a>
@@ -77,20 +84,20 @@ const Navbar = () => {
 						&times;
 					</button>
 					<div className='flex flex-col items-center gap-8 w-full max-w-xs'>
-						<a
-							href='#'
+						<Link
+							to='/'
 							className='text-gold text-base font-normal tracking-wide hover:text-white transition w-full text-center py-2'
 							onClick={() => setMenuOpen(false)}
 						>
 							Home
-						</a>
-						<a
-							href='#'
+						</Link>
+						<Link
+							to='/gallery'
 							className='text-gold text-base font-normal tracking-wide hover:text-white transition w-full text-center py-2'
 							onClick={() => setMenuOpen(false)}
 						>
 							Gallery
-						</a>
+						</Link>
 						<a
 							href='#'
 							className='text-gold text-base font-normal tracking-wide hover:text-white transition w-full text-center py-2'

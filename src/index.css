@@ -6,6 +6,45 @@ body {
 	@apply font-sans;
 }
 
+@layer components {
+	.card-glass {
+		@apply bg-black/40 backdrop-blur-md border border-gray-800 rounded-lg shadow-lg transition-all;
+	}
+	.section-gradient {
+		@apply bg-gradient-to-r from-black via-gray-900 to-black;
+	}
+	.btn-gold {
+		@apply bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white rounded-lg transition;
+	}
+	.btn-secondary {
+		@apply bg-white bg-opacity-10 hover:bg-opacity-20 text-white border border-white/20 rounded-lg transition;
+	}
+	.input-base {
+		@apply w-full px-4 py-2 bg-black/40 border border-gray-700 rounded-lg focus:outline-none focus:border-gold;
+	}
+	.input-search {
+		@apply w-full sm:w-80 px-4 py-2 text-sm rounded-lg bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 transition-all duration-300;
+	}
+	.flex-center {
+		@apply flex items-center justify-center;
+	}
+	.flex-col-center {
+		@apply flex flex-col items-center justify-center;
+	}
+	.card-content {
+		@apply bg-gray-800/70 backdrop-blur-md p-3 rounded-t-2xl pt-8;
+	}
+	.badge-category {
+		@apply hidden lg:inline-block px-3 py-0.5 rounded-sm text-xs tracking-wide shadow-md;
+	}
+	.badge-sale {
+		@apply px-1.5 py-0.5 rounded text-xs;
+	}
+	.section-title {
+		@apply text-3xl pt-14 2xl:pt-24 text-center font-bold text-gray-400 mb-4 uppercase;
+	}
+}
+
 @layer utilities {
 	.animate-gradient-x {
 		animation: gradient-x 8s ease-in-out infinite;

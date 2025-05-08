@@ -1,3 +1,6 @@
+// This file contains the in-memory NFT data array and a helper to add new NFTs.
+// Note: This data is not persisted and will reset on page reload.
+
 export const nftProducts = [
 	{
 		id: 1,
@@ -330,3 +333,53 @@ export const nftProducts = [
 		category: 'For You',
 	},
 ]
+
+// Function to add a new NFT to the in-memory array
+// Accepts an object with NFT fields (including a thumbnail as a data URL or path)
+// Handles both 'Buy Now' and 'Auction' sale types
+export const addNewNFT = (newNFT) => {
+	// Generate a new ID (max existing ID + 1)
+	const newId = Math.max(...nftProducts.map((nft) => nft.id)) + 1
+
+	// Create the new NFT object
+	const nftToAdd = {
+		id: newId,
+		// Use the provided thumbnail (data URL or path), fallback to a default if missing
+		thumbnail: newNFT.thumbnail || '/nftTwo.webp',
+		title: newNFT.title,
+		description: newNFT.description,
+		saleType: newNFT.saleType,
+		category: newNFT.category,
+		saleStatus: 'Active',
+		owner: {
+			name: 'New Creator',
+			address: '0x1234...5678',
+			avatar: '/avatar1.jpg',
+		},
+		// Add price or auction fields based on saleType
+		...(newNFT.saleType === 'Buy Now'
+			? { price: parseFloat(newNFT.price) }
+			: {
+					currentBid: parseFloat(newNFT.currentBid),
+					auctionEnds: new Date(
+						Date.now() + parseInt(newNFT.auctionEnds) * 24 * 60 * 60 * 1000
+					).toISOString(),
+				}),
+	}
+
+	// Add the new NFT to the array (in-memory only)
+	nftProducts.push(nftToAdd)
+	return nftToAdd
+}
+
+// Update the current bid for an NFT by id (in-memory only)
+// Returns true if successful, false if not (e.g., bid too low or NFT not found)
+export const updateNFTBid = (id, newBid) => {
+	const nft = nftProducts.find((n) => n.id === id)
+	if (!nft || nft.saleType !== 'Auction') return false
+	if (parseFloat(newBid) > parseFloat(nft.currentBid)) {
+		nft.currentBid = parseFloat(newBid)
+		return true
+	}
+	return false
+}

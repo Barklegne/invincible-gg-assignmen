@@ -50,9 +50,12 @@ const Navbar = () => {
 					>
 						Gallery
 					</Link>
-					<a href='#' className='hover:text-gold transition text-center text-sm'>
-						Docs
-					</a>
+					<Link
+						to='/docs'
+						className='hover:text-gold transition text-center text-sm'
+					>
+						Documentation
+					</Link>
 				</div>
 				<div className='hidden sm:flex flex-row gap-4 items-center w-auto'>
 					<Link
@@ -62,12 +65,20 @@ const Navbar = () => {
 					>
 						<IoIosSearch className='text-white text-2xl' />
 					</Link>
-					<button className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'>
+					<Link
+						to='/create'
+						className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'
+					>
 						New NFT
-					</button>
-					<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-sm text-white px-6 py-2 rounded-lg border border-white border-opacity-20 transition'>
-						Join
-					</button>
+					</Link>
+					<a
+						href='https://github.com/Barklegne/invincible-gg-assignmen'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='bg-white bg-opacity-10 hover:bg-opacity-20 text-sm text-white px-6 py-2 rounded-lg border border-white border-opacity-20 transition'
+					>
+						Code
+					</a>
 				</div>
 			</nav>
 			{/* Fullscreen Overlay Mobile Menu */}
@@ -100,24 +111,28 @@ const Navbar = () => {
 							Gallery
 						</Link>
 						<a
-							href='#'
+							hef='/docs'
 							className='text-gold text-base font-normal tracking-wide hover:text-white transition w-full text-center py-2'
 							onClick={() => setMenuOpen(false)}
 						>
-							Docs
+							Documentation
 						</a>
-						<button
+						<Link
+							to='/create'
 							className='bg-gold hover:bg-gold-dark text-black text-base px-6 py-2 rounded-lg shadow transition font-normal tracking-wide w-full'
 							onClick={() => setMenuOpen(false)}
 						>
-							Wallet
-						</button>
-						<button
+							New NFT
+						</Link>
+						<a
+							href='https://github.com/Barklegne/invincible-gg-assignmen'
+							target='_blank'
+							rel='noopener noreferrer'
 							className='bg-white/20 text-white text-base px-6 py-2 rounded-lg border border-white border-opacity-30 transition font-normal tracking-wide w-full hover:bg-white hover:text-black'
 							onClick={() => setMenuOpen(false)}
 						>
-							Join
-						</button>
+							Code
+						</a>
 					</div>
 				</div>
 			)}

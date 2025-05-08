@@ -46,9 +46,12 @@ const HeroSection = () => (
 				>
 					Gallery
 				</Link>
-				<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg border border-white border-opacity-20 transition text-sm'>
-					How it works?
-				</button>
+				<Link
+					to='/create'
+					className='bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg border border-white border-opacity-20 transition text-sm'
+				>
+					New NFT
+				</Link>
 			</motion.div>
 		</div>
 		{/* Right: Hero Image */}

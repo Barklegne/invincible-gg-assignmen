@@ -31,9 +31,16 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
   - **Dynamic routing**: Each NFT has its own detail page at `/nft/:id` using `useParams` from React Router
   - **Larger image, full description, owner info, sale status, and type**
   - **Auction countdown** and bid form, or purchase button for Buy Now
+  - **Live bidding**: Users can place a new bid higher than the current bid. The bid is updated in-memory, a success message is shown, and the user is automatically redirected to the gallery after a successful bid.
   - **Back button** with icon to return to the gallery
   - **All navigation and detail logic is clearly commented for future reference**
-- **All recent design, layout, and UX improvements** (including icon usage, mobile menu overlay, hero section responsiveness, and all other accepted edits) are now the baseline for the project. All future work will build on this state.
+- **Create New NFT Page**:
+  - **Accessible at `/create`** via the navbar
+  - **2-column responsive form** (stacks on mobile)
+  - **Image upload**: Users can browse and select an image from their device (local preview only, not persisted)
+  - **All NFT fields**: Title, description, sale type, price/bid, auction duration, category
+  - **In-memory data**: New NFTs are added to the session's array and will disappear on reload
+  - **Success message and redirect**: After creation, a success message is shown and the user is redirected to the gallery
 
 ## Project Structure
 
@@ -52,9 +59,10 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 │   │   └── NFTCardSkeleton.jsx # Skeleton loader for NFT cards
 │   ├── pages/
 │   │   ├── Gallery.jsx   # NFT gallery with category sections, search, and view toggle
-│   │   └── NFTDetail.jsx # NFT detail page with dynamic routing, auction, and back button
+│   │   ├── NFTDetail.jsx # NFT detail page with dynamic routing, auction, live bidding, and back button
+│   │   └── NewNFT.jsx    # Create NFT page with image upload and 2-column form
 │   ├── data/
-│   │   └── nft.js        # NFT data with categories and thumbnail variety
+│   │   └── nft.js        # NFT data with categories, thumbnail variety, addNewNFT, and updateNFTBid helpers
 │   ├── App.jsx           # Main app entry
 │   └── index.css         # Tailwind and custom styles
 ├── tailwind.config.js    # Tailwind config with gold theme
@@ -86,7 +94,11 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **NFT Detail Page:**
   - Visit `/nft/:id` to see a full NFT detail view, with all info, auction countdown, and a back button.
   - Uses `useParams` for dynamic routing and `useNavigate` for navigation.
+  - **Live bidding:** Place a bid higher than the current bid. On success, the bid is updated in-memory, a message is shown, and you are redirected to the gallery.
   - All logic is commented for clarity.
+- **Create New NFT Page:**
+  - Visit `/create` to add a new NFT. The form supports image upload (local preview only), all NFT fields, and a 2-column layout on desktop.
+  - New NFTs are stored in-memory and will disappear on reload.
 
 ## Animation (Framer Motion)
 - All main sections and key elements use Framer Motion for reveal-on-scroll animations.
@@ -100,6 +112,9 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **Navbar/hero links:** Edit text and links in `Navbar.jsx` and `HeroSection.jsx`.
 - **Add more pages:** Create new files in `src/pages/` and use React Router or your preferred routing solution.
 - **Add new NFT categories:** Add a new category to the `category` field in your NFT data and to the `CATEGORY_ORDER` array in `Gallery.jsx`.
+
+## Data Persistence
+- **NFTs are stored in-memory only.** Any new NFTs created via the form or new bids placed will be lost on page reload. To persist data, you would need to connect to a backend or use localStorage.
 
 ## License
 

@@ -17,7 +17,7 @@ const NFTCard = ({ nft, viewMode }) => {
 			viewport={{ once: true, amount: 0.3 }}
 			transition={{ duration: 0.5 }}
 			// Card container: responsive, glassy, with hover effects
-			className={`bg-black/40 backdrop-blur-md border border-gray-800 rounded-lg overflow-hidden hover:border-gray-700 transition-all hover:shadow-lg hover:shadow-gray-700 duration-300 shadow-lg shadow-white/10 ${
+			className={`card-glass overflow-hidden hover:border-gray-700 hover:shadow-lg hover:shadow-gray-700 duration-300 shadow-white/10 ${
 				viewMode === 'list' ? 'flex max-w-full' : 'w-full max-w-[300px] mx-auto'
 			}`}
 		>
@@ -54,9 +54,7 @@ const NFTCard = ({ nft, viewMode }) => {
 
 					{/* Description (only in list view) */}
 					{viewMode === 'list' && (
-						<p className='text-gray-400 text-sm mb-4 line-clamp-2'>
-							{nft.description}
-						</p>
+						<p className='text-gray text-sm mb-4 line-clamp-2'>{nft.description}</p>
 					)}
 
 					{/* Price/Bid Info, Sale Type, and Category Badge */}
@@ -67,7 +65,7 @@ const NFTCard = ({ nft, viewMode }) => {
 					>
 						<div>
 							{/* Show 'Current Bid' for auctions, 'Price' otherwise */}
-							<p className='text-gray-400 text-xs'>
+							<p className='text-gray text-xs'>
 								{nft.saleType.toLowerCase() === 'auction' ? 'Current Bid' : 'Price'}
 							</p>
 							<p className='text-gold text-xs font-medium'>
@@ -81,7 +79,7 @@ const NFTCard = ({ nft, viewMode }) => {
 							{nft.category && (
 								<span
 									className={` hidden lg:inline-block px-3 py-0.5 rounded-sm text-xs  tracking-wide  shadow-md
-										${
+										$ {
 											nft.category === 'Top Selling'
 												? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black'
 												: nft.category === 'For You'
@@ -110,11 +108,7 @@ const NFTCard = ({ nft, viewMode }) => {
 				{/* Action Button: Buy Now or Place Bid */}
 				<button
 					onClick={() => navigate(`/nft/${nft.id}`)}
-					className={`my-2 ${viewMode === 'list' ? 'w-fit px-8' : 'w-full'} py-3 rounded-lg text-sm font-medium transition-all duration-300  bg-white/10  border-white/20 ${
-						nft.saleType === 'Buy Now'
-							? 'border  text-white bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700'
-							: ' hover:bg-white/20  border text-white'
-					}`}
+					className={`my-2 ${viewMode === 'list' ? 'w-fit px-8' : 'w-full'} py-3 rounded-lg text-sm font-medium btn-gold border-white/20`}
 				>
 					{nft.saleType === 'Buy Now' ? 'Buy Now' : 'Place Bid'}
 				</button>

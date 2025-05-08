@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { nftProducts } from '../data/nft'
+import { nftProducts, updateNFTBid } from '../data/nft'
 import { BsArrowLeft } from 'react-icons/bs'
 
 // Helper to format time left for auction countdown
@@ -21,6 +21,8 @@ const NFTDetail = () => {
 
 	const [bid, setBid] = useState('')
 	const [timeLeft, setTimeLeft] = useState(null)
+	const [bidMessage, setBidMessage] = useState('')
+	const [currentBid, setCurrentBid] = useState(nft?.currentBid)
 
 	// Set up auction countdown timer if needed
 	useEffect(() => {
@@ -32,6 +34,13 @@ const NFTDetail = () => {
 			return () => clearInterval(interval) // clear the interval when the component unmounts
 		}
 	}, [nft])
+
+	// Keep local currentBid in sync if NFT changes (e.g., after a new bid)
+	useEffect(() => {
+		if (nft && nft.currentBid !== currentBid) {
+			setCurrentBid(nft.currentBid)
+		}
+	}, [nft, currentBid])
 
 	if (!nft)
 		return <div className='text-center text-white py-20'>NFT not found.</div>
@@ -94,9 +103,7 @@ const NFTDetail = () => {
 						{/* Price or Current Bid */}
 						<div className='mb-3'>
 							<span className='text-2xl sm:text-3xl font-bold text-white'>
-								{nft.saleType === 'Buy Now'
-									? `${nft.price} ETH`
-									: `${nft.currentBid} ETH`}
+								{nft.saleType === 'Buy Now' ? `${nft.price} ETH` : `${currentBid} ETH`}
 							</span>
 						</div>
 						{/* Auction Countdown or Purchase Button */}
@@ -113,16 +120,31 @@ const NFTDetail = () => {
 									<form
 										className='mt-3 flex flex-col gap-4 w-full'
 										onSubmit={(e) => {
-											e.preventDefault() /* handle bid */
+											e.preventDefault()
+											// Call updateNFTBid to update the bid in-memory
+											const success = updateNFTBid(nft.id, bid)
+											if (success) {
+												// Show success message and update local state
+												setBidMessage('Bid placed successfully! Redirecting to gallery...')
+												setCurrentBid(parseFloat(bid))
+												setBid('')
+												// Redirect to gallery after 1.5s
+												setTimeout(() => {
+													navigate('/gallery')
+												}, 1500)
+											} else {
+												// Show error if bid is not higher
+												setBidMessage('Bid must be higher than the current bid.')
+											}
 										}}
 									>
 										<input
 											type='number'
-											min={nft.currentBid + 0.01} // min bid is current bid + 0.01
-											step='0.01' // step to increment is 0.01
+											min={currentBid + 0.01}
+											step='0.01'
 											value={bid}
 											onChange={(e) => setBid(e.target.value)}
-											placeholder={`Bid more than ${nft.currentBid} ETH`}
+											placeholder={`Bid more than ${currentBid} ETH`}
 											className='px-4 py-2 rounded-lg bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition w-full'
 										/>
 										<button
@@ -131,6 +153,13 @@ const NFTDetail = () => {
 										>
 											Bid
 										</button>
+										{bidMessage && (
+											<div
+												className={`text-xs mt-2 ${bidMessage.includes('success') ? 'text-green-400' : 'text-red-400'}`}
+											>
+												{bidMessage}
+											</div>
+										)}
 									</form>
 								</div>
 							</div>

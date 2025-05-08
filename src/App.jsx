@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import NFTDetail from './pages/NFTDetail'
 import Documentation from './pages/Documentation'
 import NewNFT from './pages/NewNFT'
+import NotFound from './pages/NotFound'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path='/nft/:id' element={<NFTDetail />} />
 				<Route path='/docs' element={<Documentation />} />
 				<Route path='/create' element={<NewNFT />} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 			<Footer />
 		</div>

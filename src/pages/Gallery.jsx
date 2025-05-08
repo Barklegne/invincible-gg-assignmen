@@ -31,7 +31,7 @@ const Gallery = () => {
 		setLoading(true)
 		const timer = setTimeout(() => {
 			setLoading(false)
-		}, 1500) // 1.5s fake network delay
+		}, 500) // 0.5s fake network delay
 		return () => clearTimeout(timer)
 	}, [debouncedSearch, viewMode]) // dependencies for the useEffect are when the debouncedSearch or viewMode changes
 

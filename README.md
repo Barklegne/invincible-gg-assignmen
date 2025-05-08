@@ -17,7 +17,7 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **Dark, elegant background** matching the navbar and hero
 - **Easy customization** for colors, images, and layout
 - **Scalable pages structure** for future multi-page support
-- **Well-commented code** for clarity, especially around animation, logic, and data handling (see comments in all `.jsx` files)
+- **Well-commented code** for clarity, especially around animation, navigation, logic, and data handling (see comments in all `.jsx` files)
 - **NFT Gallery** with the following features:
   - **Categorized sections**: NFTs are grouped and displayed by category (e.g., Top Selling, For You, Best Deals)
   - **Grid/List toggle**: Switch between grid and horizontal list views for browsing NFTs
@@ -27,6 +27,12 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
   - **Responsive layout**: Both grid and list views are fully responsive
   - **Sectioned display**: Each category is shown as a separate section with a heading
   - **Modern card design**: Cards feature price, sale type, category, and a clean, compact layout
+- **NFT Detail Page**:
+  - **Dynamic routing**: Each NFT has its own detail page at `/nft/:id` using `useParams` from React Router
+  - **Larger image, full description, owner info, sale status, and type**
+  - **Auction countdown** and bid form, or purchase button for Buy Now
+  - **Back button** with icon to return to the gallery
+  - **All navigation and detail logic is clearly commented for future reference**
 - **All recent design, layout, and UX improvements** (including icon usage, mobile menu overlay, hero section responsiveness, and all other accepted edits) are now the baseline for the project. All future work will build on this state.
 
 ## Project Structure
@@ -45,7 +51,8 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 │   │   ├── NFTCard.jsx   # NFT card with category badge, sale type, and responsive design
 │   │   └── NFTCardSkeleton.jsx # Skeleton loader for NFT cards
 │   ├── pages/
-│   │   └── Gallery.jsx   # NFT gallery with category sections, search, and view toggle
+│   │   ├── Gallery.jsx   # NFT gallery with category sections, search, and view toggle
+│   │   └── NFTDetail.jsx # NFT detail page with dynamic routing, auction, and back button
 │   ├── data/
 │   │   └── nft.js        # NFT data with categories and thumbnail variety
 │   ├── App.jsx           # Main app entry
@@ -68,7 +75,7 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 3. **Open your browser:**
    Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal)
 
-## NFT Gallery Features
+## NFT Gallery & Detail Features
 
 - **Categories:** NFTs are grouped by category. To add or change categories, edit the `category` field in each NFT object in `src/data/nft.js` and update the `CATEGORY_ORDER` array in `Gallery.jsx`.
 - **Thumbnails:** Place static images (SVGs, PNGs, etc.) in the `public/` folder and reference them as `/filename.svg` in your data. Do not use `/src/assets/filename.svg` for static asset paths in production.
@@ -76,6 +83,10 @@ A modern NFT marketplace landing page built with React, Vite, and Tailwind CSS.
 - **Grid/List Toggle:** Use the buttons in the gallery to switch between grid and list views. List view shows two cards per row on larger screens.
 - **Category Badges:** Each card displays a colored badge for its category, styled and positioned next to the sale type label.
 - **Skeleton Loading:** While fetching or filtering, skeleton loaders are shown to mimic network delay.
+- **NFT Detail Page:**
+  - Visit `/nft/:id` to see a full NFT detail view, with all info, auction countdown, and a back button.
+  - Uses `useParams` for dynamic routing and `useNavigate` for navigation.
+  - All logic is commented for clarity.
 
 ## Animation (Framer Motion)
 - All main sections and key elements use Framer Motion for reveal-on-scroll animations.

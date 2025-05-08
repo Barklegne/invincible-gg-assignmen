@@ -2,12 +2,14 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 // NFTCard component displays a single NFT's details in either grid or list view
 // Props:
 //   nft: NFT object containing all data for the card
 //   viewMode: 'grid' or 'list' (controls layout)
 const NFTCard = ({ nft, viewMode }) => {
+	const navigate = useNavigate()
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 20 }}
@@ -107,9 +109,10 @@ const NFTCard = ({ nft, viewMode }) => {
 
 				{/* Action Button: Buy Now or Place Bid */}
 				<button
-					className={`my-2 ${viewMode === 'list' ? 'w-fit px-8' : 'w-full'} py-3 rounded-lg text-xs font-medium transition-all duration-300  bg-white/10  border-white/20 ${
+					onClick={() => navigate(`/nft/${nft.id}`)}
+					className={`my-2 ${viewMode === 'list' ? 'w-fit px-8' : 'w-full'} py-3 rounded-lg text-sm font-medium transition-all duration-300  bg-white/10  border-white/20 ${
 						nft.saleType === 'Buy Now'
-							? 'border  text-black bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700'
+							? 'border  text-white bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700'
 							: ' hover:bg-white/20  border text-white'
 					}`}
 				>

@@ -10,7 +10,7 @@ export const nftProducts = [
 		owner: {
 			name: 'CryptoCollector',
 			address: '0x1234...5678',
-			avatar: '/src/assets/avatar1.png',
+			avatar: '/avatar1.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Top Selling',
@@ -26,10 +26,10 @@ export const nftProducts = [
 		owner: {
 			name: 'HorseTrader',
 			address: '0x8765...4321',
-			avatar: '/src/assets/avatar2.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
-		auctionEnds: '2024-03-25T23:59:59Z',
+		auctionEnds: '2025-06-25T23:59:59Z',
 		category: 'For You',
 	},
 	{
@@ -43,7 +43,7 @@ export const nftProducts = [
 		owner: {
 			name: 'WildWestNFT',
 			address: '0x2468...1357',
-			avatar: '/src/assets/avatar3.png',
+			avatar: '/avatar3.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Best Deals',
@@ -59,7 +59,7 @@ export const nftProducts = [
 		owner: {
 			name: 'RoyalCollector',
 			address: '0x1357...2468',
-			avatar: '/src/assets/avatar4.png',
+			avatar: '/avatar4.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-26T23:59:59Z',
@@ -76,7 +76,7 @@ export const nftProducts = [
 		owner: {
 			name: 'FantasyArt',
 			address: '0x9876...5432',
-			avatar: '/src/assets/avatar5.png',
+			avatar: '/avatar1.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'For You',
@@ -92,7 +92,7 @@ export const nftProducts = [
 		owner: {
 			name: 'MedievalNFT',
 			address: '0x5432...9876',
-			avatar: '/src/assets/avatar6.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-27T23:59:59Z',
@@ -109,7 +109,7 @@ export const nftProducts = [
 		owner: {
 			name: 'FrostCollector',
 			address: '0x7890...1234',
-			avatar: '/src/assets/avatar7.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Top Selling',
@@ -125,7 +125,7 @@ export const nftProducts = [
 		owner: {
 			name: 'CosmicTrader',
 			address: '0x3456...7890',
-			avatar: '/src/assets/avatar8.png',
+			avatar: '/avatar3.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-28T23:59:59Z',
@@ -142,7 +142,7 @@ export const nftProducts = [
 		owner: {
 			name: 'JungleArt',
 			address: '0x2345...6789',
-			avatar: '/src/assets/avatar9.png',
+			avatar: '/avatar4.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Best Deals',
@@ -158,7 +158,7 @@ export const nftProducts = [
 		owner: {
 			name: 'SteamPunkNFT',
 			address: '0x4567...8901',
-			avatar: '/src/assets/avatar10.png',
+			avatar: '/avatar1.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-29T23:59:59Z',
@@ -175,7 +175,7 @@ export const nftProducts = [
 		owner: {
 			name: 'MythicCollector',
 			address: '0x5678...9012',
-			avatar: '/src/assets/avatar11.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'For You',
@@ -191,7 +191,7 @@ export const nftProducts = [
 		owner: {
 			name: 'QuantumTrader',
 			address: '0x6789...0123',
-			avatar: '/src/assets/avatar12.png',
+			avatar: '/avatar3.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-30T23:59:59Z',
@@ -208,7 +208,7 @@ export const nftProducts = [
 		owner: {
 			name: 'CrystalArt',
 			address: '0x7890...1234',
-			avatar: '/src/assets/avatar13.png',
+			avatar: '/avatar4.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Top Selling',
@@ -224,7 +224,7 @@ export const nftProducts = [
 		owner: {
 			name: 'CyberPunkNFT',
 			address: '0x8901...2345',
-			avatar: '/src/assets/avatar14.png',
+			avatar: '/avatar1.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-03-31T23:59:59Z',
@@ -241,7 +241,7 @@ export const nftProducts = [
 		owner: {
 			name: 'NatureCollector',
 			address: '0x9012...3456',
-			avatar: '/src/assets/avatar15.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Best Deals',
@@ -257,7 +257,7 @@ export const nftProducts = [
 		owner: {
 			name: 'TimeTrader',
 			address: '0x0123...4567',
-			avatar: '/src/assets/avatar16.png',
+			avatar: '/avatar3.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-04-01T23:59:59Z',
@@ -274,7 +274,7 @@ export const nftProducts = [
 		owner: {
 			name: 'OceanArt',
 			address: '0x1234...5678',
-			avatar: '/src/assets/avatar17.png',
+			avatar: '/avatar4.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'For You',
@@ -290,7 +290,7 @@ export const nftProducts = [
 		owner: {
 			name: 'SpaceCollector',
 			address: '0x2345...6789',
-			avatar: '/src/assets/avatar18.png',
+			avatar: '/avatar1.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-04-02T23:59:59Z',
@@ -307,7 +307,7 @@ export const nftProducts = [
 		owner: {
 			name: 'LuckyTrader',
 			address: '0x3456...7890',
-			avatar: '/src/assets/avatar19.png',
+			avatar: '/avatar2.jpg',
 		},
 		saleStatus: 'Active',
 		category: 'Top Selling',
@@ -323,7 +323,7 @@ export const nftProducts = [
 		owner: {
 			name: 'LegendCollector',
 			address: '0x4567...8901',
-			avatar: '/src/assets/avatar20.png',
+			avatar: '/avatar3.jpg',
 		},
 		saleStatus: 'Active',
 		auctionEnds: '2024-04-03T23:59:59Z',

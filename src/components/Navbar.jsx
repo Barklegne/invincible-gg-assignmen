@@ -63,7 +63,7 @@ const Navbar = () => {
 						<IoIosSearch className='text-white text-2xl' />
 					</Link>
 					<button className='bg-gold hover:bg-gold-dark text-sm text-black px-6 py-2 rounded-lg shadow transition'>
-						Wallet
+						New NFT
 					</button>
 					<button className='bg-white bg-opacity-10 hover:bg-opacity-20 text-sm text-white px-6 py-2 rounded-lg border border-white border-opacity-20 transition'>
 						Join

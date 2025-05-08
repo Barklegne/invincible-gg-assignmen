@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Footer from './components/Footer'
+import NFTDetail from './pages/NFTDetail'
 function App() {
 	return (
 		<div className='min-h-screen bg-black'>
@@ -11,6 +12,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/gallery' element={<Gallery />} />
+				<Route path='/nft/:id' element={<NFTDetail />} />
 			</Routes>
 			<Footer />
 		</div>

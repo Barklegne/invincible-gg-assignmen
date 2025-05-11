@@ -1,4 +1,4 @@
-# Horse Bazaar NFT Marketplace by IGG
+# Horse Bazaar NFT Assignment Marketplace by IGG
 
 A modern NFT marketplace landing page built with React, Vite, Framer Motion, and Tailwind CSS.
 

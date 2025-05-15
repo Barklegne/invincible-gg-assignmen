@@ -1,4 +1,4 @@
-# Horse Bazaar NFT Assignment Marketplace by IGG
+# Horse Bazaar NFT Frontend Assignment Marketplace by IGG
 
 A modern NFT marketplace landing page built with React, Vite, Framer Motion, and Tailwind CSS.
 
@@ -101,12 +101,14 @@ A modern NFT marketplace landing page built with React, Vite, Framer Motion, and
   - New NFTs are stored in-memory and will disappear on reload.
 
 ## Animation (Framer Motion)
+
 - All main sections and key elements use Framer Motion for reveal-on-scroll animations.
 - **Animations repeat** every time the element enters the viewport (not just once).
 - You can customize the animation by editing the `initial`, `whileInView`, `transition`, and `viewport` props in each component.
 - The code is well-commented to help you understand and tweak the animation logic.
 
 ## Customization
+
 - **Change hero or NFT images:** Place static images in `public/` and reference them as `/filename.svg` in your data, or import them if used directly in components.
 - **Edit gold theme:** Update the `gold` colors in `tailwind.config.js`.
 - **Navbar/hero links:** Edit text and links in `Navbar.jsx` and `HeroSection.jsx`.
@@ -114,6 +116,7 @@ A modern NFT marketplace landing page built with React, Vite, Framer Motion, and
 - **Add new NFT categories:** Add a new category to the `category` field in your NFT data and to the `CATEGORY_ORDER` array in `Gallery.jsx`.
 
 ## Data Persistence
+
 - **NFTs are stored in-memory only.** Any new NFTs created via the form or new bids placed will be lost on page reload. To persist data, you would need to connect to a backend or use localStorage.
 
 ## License

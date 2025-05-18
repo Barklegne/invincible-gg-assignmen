@@ -1,4 +1,4 @@
-# Horse Bazaar NFT Frontend Assignment Marketplace by IGG
+# Horse Bazaar NFT Frontend Assignment Marketplace by OC
 
 A modern NFT marketplace landing page built with React, Vite, Framer Motion, and Tailwind CSS.
 

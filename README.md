@@ -1,4 +1,4 @@
-# Horse Bazaar NFT Frontend Assignment Marketplace by IGG Owners Club
+# Horse Bazaar NFT Frontend Assignment Marketplace by IGG Owners Club store front
 
 A modern NFT marketplace landing page built with React, Vite, Framer Motion, and Tailwind CSS.
 

@@ -9,7 +9,7 @@ const CATEGORY_ORDER = ['Top Selling', 'For You', 'Best Deals']
 
 // Gallery page: displays all NFTs grouped by category, with search and view toggle
 const Gallery = () => {
-	// View mode: 'grid' or 'list'
+	// View mode: 'grid' or
 	const [viewMode, setViewMode] = useState('grid')
 	// Search input value
 	const [search, setSearch] = useState('')

@@ -49,7 +49,7 @@ const Gallery = () => {
 		<div className='min-h-screen bg-gradient-to-r  from-black via-gray-900 to-black text-white w-full px-4 sm:px-8 lg:px-16'>
 			{/* Page Title */}
 			<h1 className='text-3xl pt-14 2xl:pt-24 text-center font-bold text-gray-400 mb-4  uppercase'>
-				Horse Bazaar Gallery
+				Horse Gallery
 			</h1>
 
 			{/* Controls: Search input and View toggle */}

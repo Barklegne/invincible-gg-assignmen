@@ -52,7 +52,7 @@ const Gallery = () => {
 				Horse Gallery
 			</h1>
 
-			{/* Controls: Search input and View toggle */}
+			{/* Controls: Search input and View toggle buttons */}
 			<div className='mb-6 flex flex-row items-center justify-end gap-4'>
 				<input
 					type='text'

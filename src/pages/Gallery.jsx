@@ -35,7 +35,7 @@ const Gallery = () => {
 		return () => clearTimeout(timer)
 	}, [debouncedSearch, viewMode]) // dependencies for the useEffect are when the debouncedSearch or viewMode changes
 
-	// Group NFTs by category, filter by debounced search
+	// Group NFTs by category, filter with debounced search
 	const nftsByCategory = CATEGORY_ORDER.map((cat) => ({
 		category: cat,
 		items: nftProducts.filter(

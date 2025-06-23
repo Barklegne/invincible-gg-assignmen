@@ -52,7 +52,7 @@ const Gallery = () => {
 				NFT Horses Gallery
 			</h1>
 
-			{/* Search and  toggle btns */}
+			{/* Search and view toggles */}
 			<div className='mb-6 flex flex-row items-center justify-end gap-4'>
 				<input
 					type='text'

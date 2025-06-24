@@ -58,7 +58,7 @@ const Gallery = () => {
 					type='text'
 					value={search}
 					onChange={(e) => setSearch(e.target.value)}
-					placeholder='Search  horses here...'
+					placeholder='Search horses here...'
 					className='w-full sm:w-80 px-4 py-2 text-sm rounded-lg bg-black/40 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 transition-all duration-300'
 				/>
 				<div className='flex gap-2 bg-black/40 backdrop-blur-md border border-gray-800 rounded-lg p-1'>

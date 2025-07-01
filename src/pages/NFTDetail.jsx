@@ -134,7 +134,7 @@ const NFTDetail = () => {
 												}, 1500)
 											} else {
 												// Show error if bid is not higher
-												setBidMessage('Bid must be higher than the current bid.')
+												setBidMessage('Bid must be higher than the current bid!')
 											}
 										}}
 									>

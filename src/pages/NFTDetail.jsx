@@ -165,7 +165,7 @@ const NFTDetail = () => {
 							</div>
 						) : (
 							<button className=' bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white px-8 py-3 rounded-lg   transition mb-4 w-full sm:w-auto font-light'>
-								Purchase
+								Purchase Now
 							</button>
 						)}
 					</div>

@@ -11,7 +11,7 @@ const tiers = [
 		price: '0.5 ETH',
 		features: [
 			'Featured NFT Listing',
-			'Priority Support',
+			'Priority Support...',
 			'Community Access +',
 			'Analytics Dashboard',
 		],

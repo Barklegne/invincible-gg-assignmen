@@ -26,7 +26,7 @@ const tiers = [
 			'1-on-1 Support',
 			'Community Access',
 			'Advanced Analytics',
-			'Early Drops',
+			'Early Drops +',
 		],
 		cta: 'Become Elite',
 		highlight: false,

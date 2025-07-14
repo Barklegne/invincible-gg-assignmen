@@ -25,7 +25,7 @@ const tiers = [
 			'Premium NFT Listing',
 			'1-on-1 Support',
 			'Community Access 24/7',
-			'Advanced Analytics',
+			'Advanced Analytics Dashboard',
 			'Early Drops +',
 		],
 		cta: 'Become Elite',

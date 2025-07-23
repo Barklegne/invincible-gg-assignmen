@@ -19,7 +19,7 @@ const tiers = [
 			'Community Access',
 			'Limited Dashboards',
 		],
-		cta: 'Go Pro',
+		cta: 'Go Pro+',
 		highlight: true,
 	},
 	{

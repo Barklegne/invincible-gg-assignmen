@@ -30,7 +30,7 @@ const tiers = [
 			'1-on-1 Support',
 			'Community Access 24/7',
 			'Advanced Analytics Dashboard',
-			'Early Drops',
+			'Early Drops and more',
 		],
 		cta: 'Become Elite',
 		highlight: false,

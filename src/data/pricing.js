@@ -12,7 +12,7 @@ const tiers = [
 	},
 	{
 		name: 'Pro',
-		price: '0.6 ETH',
+		price: '0.4 ETH',
 		features: [
 			'Featured NFT Listing',
 			'Priority Support',
@@ -27,7 +27,7 @@ const tiers = [
 		price: '1 ETH',
 		features: [
 			'Premium NFT Listing',
-			// '1-on-1 Support',
+			// '1-on-1 Support', /
 			'Community Access 24/7',
 			'Advanced Analytics Dashboard',
 			'Early Drops and more',

@@ -1,7 +1,7 @@
 const tiers = [
 	{
 		name: 'Starter',
-		price: '0.05 ETH',
+		price: '0.3 ETH',
 		features: [
 			'Basic NFT Listing',
 			'Standard Support',

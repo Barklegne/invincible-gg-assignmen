@@ -24,7 +24,7 @@ const tiers = [
 	},
 	{
 		name: 'Elites',
-		price: '1 ETH',
+		price: '1.0 ETH',
 		features: [
 			'Premium NFT Listing',
 			// '1-on-1 Support', /

@@ -16,7 +16,7 @@ const tiers = [
 		features: [
 			'Featured NFT Listing',
 			'Priority Support',
-			'Community Access',
+			'Full community Access',
 			'Limited Dashboards',
 		],
 		cta: 'Go Pro+',

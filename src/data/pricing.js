@@ -18,6 +18,7 @@ const tiers = [
 			'Priority Support',
 			'Full community Access',
 			'Limited Dashboards',
+			'Early Drops and more',
 		],
 		cta: 'Go Pro+',
 		highlight: true,

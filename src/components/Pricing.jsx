@@ -13,7 +13,7 @@ const Pricing = () => (
 			className='max-w-6xl mx-auto px-4'
 		>
 			<h2 className='text-4xl font-extrabold text-center mb-12 text-gold'>
-				Our Pricing
+				Pricing
 			</h2>
 			<div className='grid md:grid-cols-3 gap-8'>
 				{tiers.map((tier, idx) => (

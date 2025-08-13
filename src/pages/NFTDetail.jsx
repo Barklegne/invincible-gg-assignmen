@@ -110,7 +110,7 @@ const NFTDetail = () => {
 						{nft.saleType === 'Auction' && nft.auctionEnds ? (
 							<div className='mb-3'>
 								<div className='text-xs sm:text-sm text-gray-400 mb-1'>
-									Auction ends in:
+									Auction ends in
 								</div>
 								<div className='text-base sm:text-xl font-mono text-gold'>
 									{/* {formatTimeLeft(timeLeft)}  helps to show the time left for the auction */}

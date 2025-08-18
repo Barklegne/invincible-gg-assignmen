@@ -43,7 +43,7 @@ const NFTDetail = () => {
 	}, [nft, currentBid])
 
 	if (!nft)
-		return <div className='text-center text-white py-20'>NFT not found</div>
+		return <div className='text-center text-white py-20'>NFT not found!</div>
 
 	return (
 		<div className='min-h-screen py-6 bg-gradient-to-r from-black via-gray-900 to-black text-white flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16'>

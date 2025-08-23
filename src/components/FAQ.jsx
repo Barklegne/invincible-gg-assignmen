@@ -14,9 +14,7 @@ const FAQ = () => {
 				transition={{ duration: 0.8, ease: 'easeOut' }}
 				className='max-w-3xl mx-auto px-4'
 			>
-				<h2 className='text-4xl font-extrabold text-center mb-12 text-gold'>
-					FAQs
-				</h2>
+				<h2 className='text-4xl font-extrabold text-center mb-12 text-gold'>FAQ</h2>
 				<div className='space-y-6'>
 					{faqs.map((faq, i) => (
 						<motion.div

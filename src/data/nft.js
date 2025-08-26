@@ -356,7 +356,7 @@ export const addNewNFT = (newNFT) => {
 			address: '0x1234...5678',
 			avatar: '/avatar1.jpg',
 		},
-		// Add price or auction fields based on saleType
+		// Add price or auction fields based on saleTypes
 		...(newNFT.saleType === 'Buy Now'
 			? { price: parseFloat(newNFT.price) }
 			: {

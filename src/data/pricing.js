@@ -20,7 +20,7 @@ const tiers = [
 			'Limited Dashboards',
 			'Early Drops',
 		],
-		cta: 'Go Pro+',
+		cta: 'Go Pro',
 		highlight: true,
 	},
 	{

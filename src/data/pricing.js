@@ -28,7 +28,7 @@ const tiers = [
 		price: '2.0 ETH',
 		features: [
 			'Premium NFT Listing',
-			// '1-on-1 Support', /
+			'1-on-1 Support',
 			'Community Access 24/7',
 			'Advanced Analytics Dashboard',
 			'Early Drops and more',

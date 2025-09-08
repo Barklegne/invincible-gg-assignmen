@@ -24,7 +24,7 @@ const tiers = [
 		highlight: true,
 	},
 	{
-		name: 'Elites',
+		name: 'Elite',
 		price: '2.0 ETH',
 		features: [
 			'Premium NFT Listing',

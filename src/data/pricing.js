@@ -32,7 +32,7 @@ const tiers = [
 			'Community Access 24/7',
 			'Advanced Analytics Dashboard',
 			'Early Drops and more',
-			'Early Access to new features',
+			// 'Early Access to new features',
 		],
 		cta: 'Become Elite',
 		highlight: false,

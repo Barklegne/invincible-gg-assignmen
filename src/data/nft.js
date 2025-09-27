@@ -354,7 +354,7 @@ export const addNewNFT = (newNFT) => {
 		owner: {
 			name: 'New Creator',
 			address: '0x1234...5678',
-			avatar: '/avatar10.jpg',
+			avatar: '/avatar11.jpg',
 		},
 		// Add price or auction fields based on the sale type
 		...(newNFT.saleType === 'Buy Now'

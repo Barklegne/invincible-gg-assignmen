@@ -5,7 +5,7 @@ const faqs = [
 	},
 	{
 		q: 'How do I list my NFT?',
-		a: 'Simply connect your wallet, click "Explore" or "Get Started," and follow the prompts to list your NFT securely and easily.',
+		a: 'Simply connect your wallet, click "Explore" or "Get Started," and follow the prompts to list your NFT securely and easily via the built-in marketplace.',
 	},
 	{
 		q: 'What payment methods are supported?',

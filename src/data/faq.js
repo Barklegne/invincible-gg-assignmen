@@ -4,7 +4,7 @@ const faqs = [
 		a: 'Horse Bazaar is a modern NFT marketplace for digital art, collectibles, and more, featuring a premium user experience and gold-themed design.',
 	},
 	{
-		q: 'How do I list my NFT?',
+		q: 'How do I list my NFTs?',
 		a: 'Simply connect your wallet, click "Explore" or "Get Started," and follow the prompts to list your NFT securely and easily via the built-in marketplace.',
 	},
 	{

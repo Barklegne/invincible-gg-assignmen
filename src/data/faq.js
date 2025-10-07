@@ -8,7 +8,7 @@ const faqs = [
 		a: 'Simply connect your wallet, click "Explore" or "Get Started," and follow the prompts to list your NFT securely and easily via the built-in marketplace.',
 	},
 	{
-		q: 'What payment methods are supported?',
+		q: 'What payment methods are supported for NFT purchases and sales?',
 		a: 'We support ETH and other major cryptocurrencies for NFT purchases and sales.',
 	},
 	{

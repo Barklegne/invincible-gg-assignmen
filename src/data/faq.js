@@ -1,6 +1,6 @@
 const faqs = [
 	{
-		q: 'What is Horse Bazaar?',
+		q: 'What is Horse Bazaar marketplace?',
 		a: 'Horse Bazaar is a modern NFT marketplace for digital art, collectibles, and more, featuring a premium user experience and gold-themed design.',
 	},
 	{

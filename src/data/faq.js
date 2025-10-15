@@ -13,7 +13,7 @@ const faqs = [
 	},
 	{
 		q: 'Is there a fee for listing?',
-		a: 'Starter listings have a minimal fee. Pro and Elite tiers offer premium features for a higher fee.',
+		a: 'Starter listings have a minimal fee. Pro and Elite tiers offer premium features for a higher fee and additional benefits.',
 	},
 ]
 export default faqs

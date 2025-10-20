@@ -12,7 +12,7 @@ const faqs = [
 		a: 'We support ETH and other major cryptocurrencies for NFT purchases and sales.',
 	},
 	{
-		q: 'Is there a fee for listing or selling NFTs?',
+		q: 'Is there a fee for listing and selling NFTs?',
 		a: 'Starter listings have no fee. Pro & Elite tiers offer premium features for a higher fee and additional benefits.',
 	},
 ]
